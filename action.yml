@@ -1,15 +1,23 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: "GitHub Actions job_id parser"
+description: "Greet someone and record the time"
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  github_token:
+    description: "GITHUB_TOKEN to use GitHub API v3"
     required: true
-    default: 'World'
+  repository:
+    description: "target GitHub repository"
+    required: false
+  run_id:
+    description: "run_id of target workflow run"
+    required: false
+  job_name:
+    description: "job_name of tartget workflow jobs"
+    required: true
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  job_id:
+    description: "job_id of target workflow jobs"
+  html_url:
+    description: "html_url of target workflow jobs"
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
-  args:
-    - ${{ inputs.who-to-greet }}
+  using: "docker"
+  image: "Dockerfile"
