@@ -1,6 +1,10 @@
-# gha-jobid-action
+# GitHub Actions job_id parser
 
-GitHub Actions job_id parser
+GitHub Action to get the current workflow run's job_id
+
+This GitHub Action depends on the GitHub REST API v3.
+
+https://developer.github.com/v3/actions/workflow_jobs/
 
 ## Inputs
 

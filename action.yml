@@ -1,5 +1,5 @@
 name: "GitHub Actions job_id parser"
-description: "GitHub Actions job_id parser"
+description: "GitHub Action to get the current workflow run's job_id"
 inputs:
   github_token:
     description: "GITHUB_TOKEN to use GitHub API v3"
@@ -21,3 +21,6 @@ outputs:
 runs:
   using: "docker"
   image: "Dockerfile"
+branding:
+  icon: "link"
+  color: "blue"
