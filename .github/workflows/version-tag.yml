@@ -1,0 +1,19 @@
+name: version-tag
+on:
+  push:
+    tags:
+      - "v[0-9]+.[0-9]+.[0-9]+"
+jobs:
+  version-tag:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: tag
+        run: |
+          git remote set-url origin https://${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git
+          git tag $(basename ${TAG%.*.*})
+          git tag $(basename ${TAG%.*})
+          git push origin -f --tags
+        env:
+          TAG: ${{ github.ref }}
