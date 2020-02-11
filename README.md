@@ -1,23 +1,42 @@
-# Hello world docker action
+# gha-jobid-action
 
-This action prints "Hello World" to the log or "Hello" + the name of a person to greet. To learn how this action was built, see "[Creating a Docker container action](https://help.github.com/en/articles/creating-a-docker-container-action)" in the GitHub Help documentation.
+GitHub Actions job_id parser
 
 ## Inputs
 
-### `who-to-greet`
+### `github_token`
 
-**Required** The name of the person to greet. Default `"World"`.
+**Required** GITHUB_TOKEN to use GitHub API v3
+
+### `job_name`
+
+**Required** job_name of tartget workflow jobs
+
+### `repository`
+
+target GitHub repository
+
+### `run_id`
+
+run_id of target workflow run
 
 ## Outputs
 
-### `time`
+### `job_id`
 
-The time we greeted you.
+job_id of target workflow jobs
+
+### `html_url`
+
+html_url of target workflow jobs
 
 ## Example usage
 
 ```yaml
-uses: actions/hello-world-docker-action@master
+uses: Tiryoh/gha-jobid-action@v0
 with:
-  who-to-greet: 'Mona the Octocat'
+  github_token: ${{ secrets.GITHUB_TOKEN }}
+  job_name: @@JOB_NAME@@
 ```
+
+https://github.com/Tiryoh/docker_alpine-texlive-ja/blob/master/.github/workflows/main.yml#L31-L36
