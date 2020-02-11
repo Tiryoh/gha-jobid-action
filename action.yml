@@ -1,5 +1,5 @@
 name: "GitHub Actions job_id parser"
-description: "Greet someone and record the time"
+description: "GitHub Actions job_id parser"
 inputs:
   github_token:
     description: "GITHUB_TOKEN to use GitHub API v3"
