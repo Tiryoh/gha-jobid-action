@@ -36,11 +36,24 @@ html_url of target workflow jobs
 
 ## Example usage
 
+### Get current `job_id` URL
+
 ```yaml
-uses: Tiryoh/gha-jobid-action@v0
-with:
-  github_token: ${{ secrets.GITHUB_TOKEN }}
-  job_name: @@JOB_NAME@@
+- name: Get Current Job Log URL
+  uses: Tiryoh/gha-jobid-action@v0
+  id: jobs
+  with:
+    github_token: ${{ secrets.GITHUB_TOKEN }}
+    job_name: @@JOB_NAME@@
 ```
 
-https://github.com/Tiryoh/docker_alpine-texlive-ja/blob/master/.github/workflows/main.yml#L31-L36
+https://github.com/Tiryoh/docker-ros2-desktop-vnc/blob/ad3b893722b3f56c3e772e5f43efb2eb1bf682fb/.github/workflows/deploy.yml#L64-L69
+
+### Output `job_id` URL
+
+```yaml
+- name: Output Current Job Log URL
+  run: echo ${{ steps.jobs.outputs.html_url }}
+```
+
+https://github.com/Tiryoh/docker-ros2-desktop-vnc/blob/ad3b893722b3f56c3e772e5f43efb2eb1bf682fb/.github/workflows/deploy.yml#L88
