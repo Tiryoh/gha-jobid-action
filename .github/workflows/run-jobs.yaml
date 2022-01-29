@@ -1,5 +1,6 @@
-name: Manually triggered workflow
+name: Multi jobs Workflow
 on:
+  pull_request:
   workflow_dispatch:
 
 jobs:
