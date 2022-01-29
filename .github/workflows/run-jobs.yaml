@@ -1,18 +1,13 @@
 name: Manually triggered workflow
 on:
   workflow_dispatch:
-    inputs:
-      jobs:
-        description: 'job matrix'
-        required: true
-        default: '0,1,2'
 
 jobs:
   build-matrix:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        number: [ ${{ github.event.inputs.jobs }} ]
+        number: [ 1 ]
     steps:
     - run: |
         echo "job number: ${{ matrix.number }}"
