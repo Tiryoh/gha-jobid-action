@@ -2,7 +2,7 @@
 
 GITHUB_BASEURL=https://api.github.com
 GITHUB_API="/repos/${INPUT_REPOSITORY:-${GITHUB_REPOSITORY}}/actions/runs/${INPUT_RUN_ID:-${GITHUB_RUN_ID}}/jobs"
-URL=$(curl -Ss -H "Authorization: token ${INPUT_GITHUB_TOKEN}" -H "Content-Type: application/json" -X GET "${GITHUB_BASEURL}${GITHUB_API}" \
-| jq ".jobs | map({ name: .name, html_url: .html_url } | select(.name == \"${INPUT_JOB_NAME}\"))" | grep html_url | sed -E 's#.*"html_url": "(.*)".*#\1#g' | tail -n1)
-echo ::set-output name=job_id::$(echo ${URL} | sed -E 's#.*runs/(.*)#\1#')
-echo ::set-output name=html_url::${URL}
+eval "$(curl --get -Ss -H "Authorization: token ${INPUT_GITHUB_TOKEN}" -H "Accept: application/vnd.github.v3+json" "${GITHUB_BASEURL}${GITHUB_API}" \
+| jq -r --arg job_name "${INPUT_JOB_NAME}" '.jobs | map(select(.name == $job_name)) | .[0] | @sh "job_id=\(.id) html_url=\(.html_url)"')"
+echo ::set-output name=job_id::"${job_id}"
+echo ::set-output name=html_url::"${html_url}"
