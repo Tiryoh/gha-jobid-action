@@ -57,3 +57,18 @@ https://github.com/Tiryoh/docker-ros2-desktop-vnc/blob/ad3b893722b3f56c3e772e5f4
 ```
 
 https://github.com/Tiryoh/docker-ros2-desktop-vnc/blob/ad3b893722b3f56c3e772e5f43efb2eb1bf682fb/.github/workflows/deploy.yml#L88
+
+## Contributors
+
+Special Thanks
+
+* Petr Pučil ([@generalmimon](https://github.com/generalmimon))
+
+Contributions are always welcome!
+
+## License
+
+Copyright (c) 2020-2022 Daisuke Sato
+
+This repository is licensed under the MIT License, see [LICENSE](./LICENSE).  
+Unless attributed otherwise, everything in this repository is licensed under the MIT license.
