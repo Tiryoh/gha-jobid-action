@@ -85,5 +85,5 @@ Contributions are always welcome!
 
 Copyright (c) 2020-2022 Daisuke Sato
 
-This repository is licensed under the MIT License, see [LICENSE](./LICENSE).
+This repository is licensed under the MIT License, see [LICENSE](./LICENSE).  
 Unless attributed otherwise, everything in this repository is licensed under the MIT license.
