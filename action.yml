@@ -13,9 +13,6 @@ inputs:
   job_name:
     description: "job_name of tartget workflow jobs"
     required: true
-  per_page:
-    description: "Results per page (max 100) of target workflow run"
-    required: false
 outputs:
   job_id:
     description: "job_id of target workflow jobs"
