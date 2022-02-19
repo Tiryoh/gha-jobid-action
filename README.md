@@ -77,7 +77,10 @@ https://github.com/Tiryoh/docker-ros2-desktop-vnc/blob/ad3b893722b3f56c3e772e5f4
 
 Special Thanks
 
+* [@IngoStrauch2020](https://github.com/IngoStrauch2020)
+  * [Issue#1](https://github.com/Tiryoh/gha-jobid-action/issues/1)
 * Petr Pučil ([@generalmimon](https://github.com/generalmimon))
+  * [Pull Request#3](https://github.com/Tiryoh/gha-jobid-action/pull/3)
 
 Contributions are always welcome!
 
