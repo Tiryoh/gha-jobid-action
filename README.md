@@ -48,6 +48,10 @@ job_id of target workflow jobs
 
 html_url of target workflow jobs
 
+## Permissions
+
+The job using this GitHub Actions must have the `actions:read` permission.
+
 ## Example usage
 
 ### Get current `job_id` URL
