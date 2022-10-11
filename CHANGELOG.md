@@ -1,3 +1,11 @@
+<a name="v0.1.1"></a>
+## [v0.1.1](https://github.com/Tiryoh/gha-jobid-action/compare/v0.1.0...v0.1.1) (2022-10-12)
+
+### Documentation
+
+* Update special thanks ([#14](https://github.com/Tiryoh/gha-jobid-action/issues/14))
+* Add permission section to README ([#12](https://github.com/Tiryoh/gha-jobid-action/issues/12))
+* Update special thanks ([#11](https://github.com/Tiryoh/gha-jobid-action/issues/11))
 
 <a name="v0.1.0"></a>
 ## [v0.1.0](https://github.com/Tiryoh/gha-jobid-action/compare/v0.0.3...v0.1.0) (2022-01-30)
