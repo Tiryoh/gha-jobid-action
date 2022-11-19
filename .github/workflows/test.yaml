@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout action
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           path: .github/actions/gha-jobid-action
       - name: Run action with options
@@ -50,7 +50,7 @@ jobs:
             fi
           }
           ERROR_FLAG=0
-          check_url "${{ steps.test1.outputs.html_url }}" "https://github.com/Tiryoh/gha-jobid-action/runs/4990990752?check_suite_focus=true"
+          check_url "${{ steps.test1.outputs.html_url }}" "https://github.com/Tiryoh/gha-jobid-action/actions/runs/1765707248/jobs/2440349148"
           check_job_id "${{ steps.test1.outputs.job_id }}" "4990990752"
           if [[ "$ERROR_FLAG" == 1 ]]; then
             exit 1
@@ -61,7 +61,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout action
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           path: .github/actions/gha-jobid-action
       - name: Run action with options
@@ -107,11 +107,11 @@ jobs:
             fi
           }
           ERROR_FLAG=0
-          check_url "${{ steps.test1.outputs.html_url }}" "https://github.com/Tiryoh/gha-jobid-action/runs/4990992769?check_suite_focus=true"
+          check_url "${{ steps.test1.outputs.html_url }}" "https://github.com/Tiryoh/gha-jobid-action/actions/runs/1765708149/jobs/2440350715"
           check_job_id "${{ steps.test1.outputs.job_id }}" "4990992769"
-          check_url "${{ steps.test2.outputs.html_url }}" "https://github.com/Tiryoh/gha-jobid-action/runs/4990992790?check_suite_focus=true"
+          check_url "${{ steps.test2.outputs.html_url }}" "https://github.com/Tiryoh/gha-jobid-action/actions/runs/1765708149/jobs/2440350733"
           check_job_id "${{ steps.test2.outputs.job_id }}" "4990992790"
-          check_url "${{ steps.test3.outputs.html_url }}" "https://github.com/Tiryoh/gha-jobid-action/runs/4990992821?check_suite_focus=true"
+          check_url "${{ steps.test3.outputs.html_url }}" "https://github.com/Tiryoh/gha-jobid-action/actions/runs/1765708149/jobs/2440350763"
           check_job_id "${{ steps.test3.outputs.job_id }}" "4990992821"
           if [[ "$ERROR_FLAG" == 1 ]]; then
             exit 1
@@ -122,7 +122,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout action
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           path: .github/actions/gha-jobid-action
       - name: Run action with options
@@ -169,11 +169,11 @@ jobs:
             fi
           }
           ERROR_FLAG=0
-          check_url "${{ steps.test1.outputs.html_url }}" "https://github.com/Tiryoh/gha-jobid-action/runs/4992187575?check_suite_focus=true"
+          check_url "${{ steps.test1.outputs.html_url }}" "https://github.com/Tiryoh/gha-jobid-action/actions/runs/1766315275/jobs/2441320701"
           check_job_id "${{ steps.test1.outputs.job_id }}" "4992187575"
-          check_url "${{ steps.test2.outputs.html_url }}" "https://github.com/Tiryoh/gha-jobid-action/runs/4992187593?check_suite_focus=true"
+          check_url "${{ steps.test2.outputs.html_url }}" "https://github.com/Tiryoh/gha-jobid-action/actions/runs/1766315275/jobs/2441320717"
           check_job_id "${{ steps.test2.outputs.job_id }}" "4992187593"
-          check_url "${{ steps.test3.outputs.html_url }}" "https://github.com/Tiryoh/gha-jobid-action/runs/4992188043?check_suite_focus=true"
+          check_url "${{ steps.test3.outputs.html_url }}" "https://github.com/Tiryoh/gha-jobid-action/actions/runs/1766315275/jobs/2441321086"
           check_job_id "${{ steps.test3.outputs.job_id }}" "4992188043"
           if [[ "$ERROR_FLAG" == 1 ]]; then
             exit 1
