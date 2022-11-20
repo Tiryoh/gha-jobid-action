@@ -1,7 +1,22 @@
+<a name="v0.1.2"></a>
+## [v0.1.2](https://github.com/Tiryoh/gha-jobid-action/compare/v0.1.1...v0.1.2) (2022-11-20)
+
+### CI
+
+* Fix test ([#18](https://github.com/Tiryoh/gha-jobid-action/issues/18))
+
+### Documentation Update
+
+* Update special thanks ([#19](https://github.com/Tiryoh/gha-jobid-action/issues/19))
+
+### Features
+
+* Update set-output to recommended format ([#17](https://github.com/Tiryoh/gha-jobid-action/issues/17))
+
 <a name="v0.1.1"></a>
 ## [v0.1.1](https://github.com/Tiryoh/gha-jobid-action/compare/v0.1.0...v0.1.1) (2022-10-12)
 
-### Documentation
+### Documentation Update
 
 * Update special thanks ([#14](https://github.com/Tiryoh/gha-jobid-action/issues/14))
 * Add permission section to README ([#12](https://github.com/Tiryoh/gha-jobid-action/issues/12))
@@ -10,7 +25,7 @@
 <a name="v0.1.0"></a>
 ## [v0.1.0](https://github.com/Tiryoh/gha-jobid-action/compare/v0.0.3...v0.1.0) (2022-01-30)
 
-### Feature
+### Features
 
 * Support workflow more than 30 jobs ([#8](https://github.com/Tiryoh/gha-jobid-action/issues/8))
 * Update LICENSE
