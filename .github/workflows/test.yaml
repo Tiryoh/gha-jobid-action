@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout action
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           path: .github/actions/gha-jobid-action
       - name: Run action with options
@@ -30,7 +30,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           job_name: "build-matrix (1)"
           repository: "Tiryoh/gha-jobid-action"
-          run_id: "1765707248"
+          run_id: "6225949607"
       - name: Verify
         run: |
           check_url() {
@@ -50,8 +50,8 @@ jobs:
             fi
           }
           ERROR_FLAG=0
-          check_url "${{ steps.test1.outputs.html_url }}" "https://github.com/Tiryoh/gha-jobid-action/actions/runs/1765707248/jobs/2440349148"
-          check_job_id "${{ steps.test1.outputs.job_id }}" "4990990752"
+          check_url "${{ steps.test1.outputs.html_url }}" "https://github.com/Tiryoh/gha-jobid-action/actions/runs/6225949607/job/16897423007"
+          check_job_id "${{ steps.test1.outputs.job_id }}" "16897423007"
           if [[ "$ERROR_FLAG" == 1 ]]; then
             exit 1
           fi
@@ -61,7 +61,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout action
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           path: .github/actions/gha-jobid-action
       - name: Run action with options
@@ -71,7 +71,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           job_name: "build-matrix (1)"
           repository: "Tiryoh/gha-jobid-action"
-          run_id: "1765708149"
+          run_id: "6225954167"
       - name: Run action with options
         id: test2
         uses: ./.github/actions/gha-jobid-action
@@ -79,7 +79,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           job_name: "build-matrix (2)"
           repository: "Tiryoh/gha-jobid-action"
-          run_id: "1765708149"
+          run_id: "6225954167"
       - name: Run action with options
         id: test3
         uses: ./.github/actions/gha-jobid-action
@@ -87,7 +87,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           job_name: "build-matrix (3)"
           repository: "Tiryoh/gha-jobid-action"
-          run_id: "1765708149"
+          run_id: "6225954167"
       - name: Verify
         run: |
           check_url() {
@@ -107,12 +107,12 @@ jobs:
             fi
           }
           ERROR_FLAG=0
-          check_url "${{ steps.test1.outputs.html_url }}" "https://github.com/Tiryoh/gha-jobid-action/actions/runs/1765708149/jobs/2440350715"
-          check_job_id "${{ steps.test1.outputs.job_id }}" "4990992769"
-          check_url "${{ steps.test2.outputs.html_url }}" "https://github.com/Tiryoh/gha-jobid-action/actions/runs/1765708149/jobs/2440350733"
-          check_job_id "${{ steps.test2.outputs.job_id }}" "4990992790"
-          check_url "${{ steps.test3.outputs.html_url }}" "https://github.com/Tiryoh/gha-jobid-action/actions/runs/1765708149/jobs/2440350763"
-          check_job_id "${{ steps.test3.outputs.job_id }}" "4990992821"
+          check_url "${{ steps.test1.outputs.html_url }}" "https://github.com/Tiryoh/gha-jobid-action/actions/runs/6225954167/job/16897439433"
+          check_job_id "${{ steps.test1.outputs.job_id }}" "16897439433"
+          check_url "${{ steps.test2.outputs.html_url }}" "https://github.com/Tiryoh/gha-jobid-action/actions/runs/6225954167/job/16897439692"
+          check_job_id "${{ steps.test2.outputs.job_id }}" "16897439692"
+          check_url "${{ steps.test3.outputs.html_url }}" "https://github.com/Tiryoh/gha-jobid-action/actions/runs/6225954167/job/16897439920"
+          check_job_id "${{ steps.test3.outputs.job_id }}" "16897439920"
           if [[ "$ERROR_FLAG" == 1 ]]; then
             exit 1
           fi
@@ -122,7 +122,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout action
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           path: .github/actions/gha-jobid-action
       - name: Run action with options
@@ -132,7 +132,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           job_name: "build-matrix (1)"
           repository: "Tiryoh/gha-jobid-action"
-          run_id: "1766315275"
+          run_id: "6225955888"
       - name: Run action with options
         id: test2
         uses: ./.github/actions/gha-jobid-action
@@ -140,7 +140,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           job_name: "build-matrix (2)"
           repository: "Tiryoh/gha-jobid-action"
-          run_id: "1766315275"
+          run_id: "6225955888"
       - name: Run action with options
         id: test3
         uses: ./.github/actions/gha-jobid-action
@@ -148,7 +148,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           job_name: "build-matrix (31)"
           repository: "Tiryoh/gha-jobid-action"
-          run_id: "1766315275"
+          run_id: "6225955888"
           per_page: 100
       - name: Verify
         run: |
@@ -169,12 +169,12 @@ jobs:
             fi
           }
           ERROR_FLAG=0
-          check_url "${{ steps.test1.outputs.html_url }}" "https://github.com/Tiryoh/gha-jobid-action/actions/runs/1766315275/jobs/2441320701"
-          check_job_id "${{ steps.test1.outputs.job_id }}" "4992187575"
-          check_url "${{ steps.test2.outputs.html_url }}" "https://github.com/Tiryoh/gha-jobid-action/actions/runs/1766315275/jobs/2441320717"
-          check_job_id "${{ steps.test2.outputs.job_id }}" "4992187593"
-          check_url "${{ steps.test3.outputs.html_url }}" "https://github.com/Tiryoh/gha-jobid-action/actions/runs/1766315275/jobs/2441321086"
-          check_job_id "${{ steps.test3.outputs.job_id }}" "4992188043"
+          check_url "${{ steps.test1.outputs.html_url }}" "https://github.com/Tiryoh/gha-jobid-action/actions/runs/6225955888/job/16897445873"
+          check_job_id "${{ steps.test1.outputs.job_id }}" "16897445873"
+          check_url "${{ steps.test2.outputs.html_url }}" "https://github.com/Tiryoh/gha-jobid-action/actions/runs/6225955888/job/16897446063"
+          check_job_id "${{ steps.test2.outputs.job_id }}" "16897446063"
+          check_url "${{ steps.test3.outputs.html_url }}" "https://github.com/Tiryoh/gha-jobid-action/actions/runs/6225955888/job/16897453514"
+          check_job_id "${{ steps.test3.outputs.job_id }}" "16897453514"
           if [[ "$ERROR_FLAG" == 1 ]]; then
             exit 1
           fi
