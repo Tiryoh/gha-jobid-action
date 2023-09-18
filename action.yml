@@ -19,8 +19,10 @@ inputs:
 outputs:
   job_id:
     description: "job_id of target workflow jobs"
+    value: ${{ steps.request.outputs.job_id }}
   html_url:
     description: "html_url of target workflow jobs"
+    value: ${{ steps.request.outputs.html_url }}
 
 branding:
   icon: "link"
@@ -29,7 +31,8 @@ branding:
 runs:
   using: 'composite'
   steps:
-    - name: Update wiki
+    - name: Parse job_id
+      id: request
       env:
         INPUT_GITHUB_TOKEN: ${{ inputs.github_token }}
         INPUT_REPOSITORY: ${{ inputs.repository }}
@@ -41,7 +44,6 @@ runs:
         GITHUB_BASEURL=https://api.github.com
         GITHUB_API="/repos/${INPUT_REPOSITORY:-${GITHUB_REPOSITORY}}/actions/runs/${INPUT_RUN_ID:-${GITHUB_RUN_ID}}/jobs"
         JOBINFO="$(curl --get -Ss -H "Authorization: Bearer ${INPUT_GITHUB_TOKEN}" -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" "${GITHUB_BASEURL}${GITHUB_API}?per_page=${INPUT_PER_PAGE:-30}")"
-        echo "${JOBINFO}"
         echo "${JOBINFO}" | grep "Resource not accessible by integration" &&  exit 1
         eval "$(echo ${JOBINFO} | jq -r --arg job_name "${INPUT_JOB_NAME}" '.jobs | map(select(.name == $job_name)) | .[0] | @sh "job_id=\(.id) html_url=\(.html_url)"')"
         echo ${job_id} | grep "null" > /dev/null && echo "parse error, job_id is ${job_id}. job name might be wrong. See https://github.com/Tiryoh/gha-jobid-action" && exit 1
