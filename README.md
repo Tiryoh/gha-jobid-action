@@ -2,15 +2,15 @@
 
 GitHub Action to get the current workflow run's job_id
 
-This GitHub Action depends on the GitHub REST API v3.
+This GitHub Action depends on the GitHub REST API Version: 2022-11-28.
 
-https://developer.github.com/v3/actions/workflow_jobs/
+https://docs.github.com/ja/rest/actions/workflow-jobs?apiVersion=2022-11-28
 
 ## Inputs
 
 ### `github_token`
 
-**Required** GITHUB_TOKEN to use GitHub API v3
+**Required** GITHUB_TOKEN to use GitHub API
 
 Simply, just specify `${{ secrets.GITHUB_TOKEN }}`.
 
@@ -85,11 +85,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout action
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Some Scripts
         run: echo "do something here"
       - name: Get Current Job Log URL
-        uses: Tiryoh/gha-jobid-action@v0
+        uses: Tiryoh/gha-jobid-action@v1
         id: jobs
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -114,11 +114,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout action
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Some Scripts
         run: echo "do something here"
       - name: Get Current Job Log URL
-        uses: Tiryoh/gha-jobid-action@v0
+        uses: Tiryoh/gha-jobid-action@v1
         id: jobs
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -144,11 +144,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout action
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Some Scripts
         run: echo "do something here ${{ matrix.distro }}"
       - name: Get Current Job Log URL
-        uses: Tiryoh/gha-jobid-action@v0
+        uses: Tiryoh/gha-jobid-action@v1
         id: jobs
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
