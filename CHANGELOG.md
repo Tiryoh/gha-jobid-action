@@ -1,3 +1,20 @@
+<a name="v1.0.0"></a>
+## [v1.0.0](https://github.com/Tiryoh/gha-jobid-action/compare/v0.1.2...v1.0.0) (2023-09-19)
+
+### Chore
+
+* Fix CI test ([#32](https://github.com/Tiryoh/gha-jobid-action/issues/32))
+* Add dependabot config ([#22](https://github.com/Tiryoh/gha-jobid-action/issues/22))
+
+### Docs
+
+* Update job_name description ([#23](https://github.com/Tiryoh/gha-jobid-action/issues/23))
+
+### Feat
+
+* Use GitHub Composite Actions ([#30](https://github.com/Tiryoh/gha-jobid-action/issues/30))
+
+
 <a name="v0.1.2"></a>
 ## [v0.1.2](https://github.com/Tiryoh/gha-jobid-action/compare/v0.1.1...v0.1.2) (2022-11-20)
 
