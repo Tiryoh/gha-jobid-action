@@ -51,7 +51,7 @@ Results per page (max 100) of target workflow run
 
 default: 30
 
-https://docs.github.com/en/rest/reference/actions#list-jobs-for-a-workflow-run-attempt
+https://docs.github.com/en/rest/actions/workflow-jobs?apiVersion=2022-11-28#list-jobs-for-a-workflow-run-attempt--parameters
 
 If there are more than 30 jobs for the target workflow, set this parameter.
 
