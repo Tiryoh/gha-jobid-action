@@ -39,9 +39,9 @@ runs:
         INPUT_RUN_ID: ${{ inputs.run_id }}
         INPUT_JOB_NAME: ${{ inputs.job_name }}
         INPUT_PER_PAGE: ${{ inputs.per_page }}
+        GITHUB_BASEURL: ${{ github.api_url }}
       shell: bash
       run: |
-        GITHUB_BASEURL=https://api.github.com
         GITHUB_API="/repos/${INPUT_REPOSITORY:-${GITHUB_REPOSITORY}}/actions/runs/${INPUT_RUN_ID:-${GITHUB_RUN_ID}}/jobs"
         JOBINFO="$(curl --get -Ss -H "Authorization: Bearer ${INPUT_GITHUB_TOKEN}" -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" "${GITHUB_BASEURL}${GITHUB_API}?per_page=${INPUT_PER_PAGE:-30}")"
         echo "${JOBINFO}" | grep "Resource not accessible by integration" &&  exit 1
