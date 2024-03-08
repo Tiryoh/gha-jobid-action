@@ -175,12 +175,15 @@ Special Thanks
   * [Pull Request#12](https://github.com/Tiryoh/gha-jobid-action/pull/12)
 * [phoeniixdotcom](https://github.com/phoeniixdotcom)
   * [Pull Request#17](https://github.com/Tiryoh/gha-jobid-action/pull/17)
+* [Florian Kaiser](https://github.com/fnkr)
+  * [Pull Request#36](https://github.com/Tiryoh/gha-jobid-action/pull/36)
 
 Contributions are always welcome!
 
 ## License
 
-Copyright (c) 2020-2023 Daisuke Sato
+Copyright (c) 2020-2024 Daisuke Sato
 
 This repository is licensed under the MIT License, see [LICENSE](./LICENSE).  
 Unless attributed otherwise, everything in this repository is licensed under the MIT license.
+
