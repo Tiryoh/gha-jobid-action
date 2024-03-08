@@ -149,7 +149,7 @@ jobs:
           job_name: "build-matrix (31)"
           repository: "Tiryoh/gha-jobid-action"
           run_id: "6225955888"
-          per_page: 100
+          per_page: 30
       - name: Verify
         run: |
           check_url() {
