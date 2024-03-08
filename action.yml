@@ -47,7 +47,7 @@ runs:
         echo "${JOBINFO}" | grep "Resource not accessible by integration" &&  exit 1
         TOTAL_COUNT="$(echo "${JOBINFO}" | jq -r .total_count)"
         eval "$(echo ${JOBINFO} | jq -r --arg job_name "${INPUT_JOB_NAME}" '.jobs | map(select(.name == $job_name)) | .[0] | @sh "JOB_ID=\(.id) HTML_URL=\(.html_url)"')"
-        echo ${JOB_ID} | grep "null" > /dev/null && echo "parse error, job_id is ${JOB_ID} and total_count is ${TOTAL_COUNT}. 'job name' or 'per_page' might be wrong. See https://github.com/Tiryoh/gha-jobid-action/blob/main/README.md#inputs" && exit 1
+        echo ${JOB_ID} | grep "null" > /dev/null && echo "parse error, job_id is ${JOB_ID} and total_count is ${TOTAL_COUNT}. 'job_name' or 'per_page' might be wrong. See https://github.com/Tiryoh/gha-jobid-action/blob/main/README.md#inputs" && exit 1
         echo "job_id=${JOB_ID}" >> $GITHUB_OUTPUT
         echo "html_url=${HTML_URL}" >> $GITHUB_OUTPUT
 
