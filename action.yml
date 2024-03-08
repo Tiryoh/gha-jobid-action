@@ -45,7 +45,9 @@ runs:
         GITHUB_API="/repos/${INPUT_REPOSITORY:-${GITHUB_REPOSITORY}}/actions/runs/${INPUT_RUN_ID:-${GITHUB_RUN_ID}}/jobs"
         JOBINFO="$(curl --get -Ss -H "Authorization: Bearer ${INPUT_GITHUB_TOKEN}" -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" "${GITHUB_BASEURL}${GITHUB_API}?per_page=${INPUT_PER_PAGE:-30}")"
         echo "${JOBINFO}" | grep "Resource not accessible by integration" &&  exit 1
-        eval "$(echo ${JOBINFO} | jq -r --arg job_name "${INPUT_JOB_NAME}" '.jobs | map(select(.name == $job_name)) | .[0] | @sh "job_id=\(.id) html_url=\(.html_url)"')"
-        echo ${job_id} | grep "null" > /dev/null && echo "parse error, job_id is ${job_id}. job name might be wrong. See https://github.com/Tiryoh/gha-jobid-action" && exit 1
-        echo "job_id=${job_id}" >> $GITHUB_OUTPUT
-        echo "html_url=${html_url}" >> $GITHUB_OUTPUT
+        TOTAL_COUNT="$(echo "${JOBINFO}" | jq -r .total_count)"
+        eval "$(echo ${JOBINFO} | jq -r --arg job_name "${INPUT_JOB_NAME}" '.jobs | map(select(.name == $job_name)) | .[0] | @sh "JOB_ID=\(.id) HTML_URL=\(.html_url)"')"
+        echo ${JOB_ID} | grep "null" > /dev/null && echo "parse error, job_id is ${JOB_ID} and total_count is ${TOTAL_COUNT}. 'job name' or 'per_page' might be wrong. See https://github.com/Tiryoh/gha-jobid-action/blob/main/README.md#inputs" && exit 1
+        echo "job_id=${JOB_ID}" >> $GITHUB_OUTPUT
+        echo "html_url=${HTML_URL}" >> $GITHUB_OUTPUT
+
