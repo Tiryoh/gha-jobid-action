@@ -1,4 +1,16 @@
 
+<a name="1.2.0"></a>
+## [1.2.0](https://github.com/Tiryoh/gha-jobid-action/compare/v1.1.0...1.2.0) (2024-03-11)
+
+### Documentation Update
+
+* Update contributors and copyright ([#41](https://github.com/Tiryoh/gha-jobid-action/issues/41))
+
+### Features
+
+* Update parse error message ([#40](https://github.com/Tiryoh/gha-jobid-action/issues/40))
+
+
 <a name="v1.1.0"></a>
 ## [v1.1.0](https://github.com/Tiryoh/gha-jobid-action/compare/v1.0.0...v1.1.0) (2023-12-23)
 
