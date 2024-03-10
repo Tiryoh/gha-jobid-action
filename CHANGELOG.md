@@ -1,6 +1,6 @@
 
 <a name="1.2.0"></a>
-## [1.2.0](https://github.com/Tiryoh/gha-jobid-action/compare/v1.1.0...1.2.0) (2024-03-10)
+## [1.2.0](https://github.com/Tiryoh/gha-jobid-action/compare/v1.1.0...1.2.0) (2024-03-11)
 
 ### Documentation Update
 
