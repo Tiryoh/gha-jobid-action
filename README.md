@@ -171,6 +171,7 @@ Special Thanks
   * [Issue#1](https://github.com/Tiryoh/gha-jobid-action/issues/1)
 * Petr Pučil ([@generalmimon](https://github.com/generalmimon))
   * [Pull Request#3](https://github.com/Tiryoh/gha-jobid-action/pull/3)
+  * [Pull Request#44](https://github.com/Tiryoh/gha-jobid-action/pull/44)
 * Masaya Suzuki ([@massongit](https://github.com/massongit))
   * [Pull Request#12](https://github.com/Tiryoh/gha-jobid-action/pull/12)
 * [phoeniixdotcom](https://github.com/phoeniixdotcom)
