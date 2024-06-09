@@ -1,6 +1,17 @@
+<a name="v1.3.0"></a>
+## [v1.3.0](https://github.com/Tiryoh/gha-jobid-action/compare/v1.2.0...v1.3.0) (2024-06-09)
 
-<a name="1.2.0"></a>
-## [1.2.0](https://github.com/Tiryoh/gha-jobid-action/compare/v1.1.0...1.2.0) (2024-03-11)
+### Bug Fixes
+
+* Fix unquoted shell variables according to ShellCheck ([#44](https://github.com/Tiryoh/gha-jobid-action/issues/44))
+
+### Documentation Update
+
+* Update contributors ([#45](https://github.com/Tiryoh/gha-jobid-action/issues/45))
+
+
+<a name="v1.2.0"></a>
+## [v1.2.0](https://github.com/Tiryoh/gha-jobid-action/compare/v1.1.0...v1.2.0) (2024-03-11)
 
 ### Documentation Update
 
