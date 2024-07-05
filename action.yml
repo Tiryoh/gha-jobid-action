@@ -3,10 +3,12 @@ description: "GitHub Action to get the current workflow run's job_id"
 inputs:
   github_token:
     description: "GITHUB_TOKEN to use GitHub API v3"
-    required: true
+    required: false
+    default: ${{ github.token }}
   repository:
     description: "target GitHub repository"
     required: false
+    default: ${{ github.repository }}
   run_id:
     description: "run_id of target workflow run"
     required: false
