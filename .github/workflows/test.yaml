@@ -56,6 +56,45 @@ jobs:
             exit 1
           fi
 
+  single-job-test-default-repo-token:
+    name: Test single job with default repo and token
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout action
+        uses: actions/checkout@v4
+        with:
+          path: .github/actions/gha-jobid-action
+      - name: Run action with options
+        id: test1
+        uses: ./.github/actions/gha-jobid-action
+        with:
+          job_name: "build-matrix (1)"
+          run_id: "6225949607"
+      - name: Verify
+        run: |
+          check_url() {
+            if [[ "$1" == "$2" ]]; then
+              echo "html_url OK"
+            else
+              echo "html_url ERROR" >&2
+              ERROR_FLAG=1
+            fi
+          }
+          check_job_id() {
+            if [[ "$1" == "$2" ]]; then
+              echo "job_id OK"
+            else
+              echo "job_id ERROR" >&2
+              ERROR_FLAG=1
+            fi
+          }
+          ERROR_FLAG=0
+          check_url "${{ steps.test1.outputs.html_url }}" "https://github.com/Tiryoh/gha-jobid-action/actions/runs/6225949607/job/16897423007"
+          check_job_id "${{ steps.test1.outputs.job_id }}" "16897423007"
+          if [[ "$ERROR_FLAG" == 1 ]]; then
+            exit 1
+          fi
+
   multi-jobs-test:
     name: Test multi jobs
     runs-on: ubuntu-latest

@@ -10,9 +10,10 @@ https://docs.github.com/ja/rest/actions/workflow-jobs?apiVersion=2022-11-28
 
 ### `github_token`
 
-**Required** GITHUB_TOKEN to use GitHub API
+**Optional** auth token to use with GitHub API
 
-Simply, just specify `${{ secrets.GITHUB_TOKEN }}`.
+By default `github.token` context value (same as `secrets.GITHUB_TOKEN`) is used. You can use your own `PAT` if prefered.
+Token requires `actions: read` scope.
 
 ### `job_name`
 
@@ -35,9 +36,9 @@ jobs:
 
 ### `repository`
 
-target GitHub repository
+**Optional**: target GitHub repository
 
-default: `${GITHUB_REPOSITORY}`
+default: `github.repository` context value
 
 ### `run_id`
 
@@ -92,7 +93,6 @@ jobs:
         uses: Tiryoh/gha-jobid-action@v1
         id: jobs
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
           job_name: "build" # input job.<job-id>
           #job_name: "${{ github.job }}"  # if job.<job-id>.name is not specified, this works too
       - name: Output Current Job Log URL
@@ -121,7 +121,6 @@ jobs:
         uses: Tiryoh/gha-jobid-action@v1
         id: jobs
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
           job_name: "Build and Test" # input job.<job-id>.name here. job.<job-id> won't works.
       - name: Output Current Job Log URL
         run: echo ${{ steps.jobs.outputs.html_url }}
@@ -151,7 +150,6 @@ jobs:
         uses: Tiryoh/gha-jobid-action@v1
         id: jobs
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
           job_name: "build (${{ matrix.distro }})" # input job.<job-id>.name and matrix here.
           per_page: 50 # input matrix size here if it is larger than 30
       - name: Output Current Job Log URL
