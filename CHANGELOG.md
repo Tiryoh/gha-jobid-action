@@ -98,6 +98,7 @@
 ### Documentation Update
 
 * Update special thanks ([#14](https://github.com/Tiryoh/gha-jobid-action/issues/14))
+* Add permission section to README ([#12](https://github.com/Tiryoh/gha-jobid-action/issues/12))
 * Update special thanks ([#11](https://github.com/Tiryoh/gha-jobid-action/issues/11))
 
 
