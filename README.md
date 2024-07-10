@@ -176,6 +176,8 @@ Special Thanks
   * [Pull Request#17](https://github.com/Tiryoh/gha-jobid-action/pull/17)
 * [Florian Kaiser](https://github.com/fnkr)
   * [Pull Request#36](https://github.com/Tiryoh/gha-jobid-action/pull/36)
+* [@piotrekkr](https://github.com/piotrekkr)
+  * [Pull Request#47](https://github.com/Tiryoh/gha-jobid-action/pull/47)
 
 Contributions are always welcome!
 
