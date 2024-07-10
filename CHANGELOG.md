@@ -1,3 +1,16 @@
+
+<a name="1.4.0"></a>
+## [1.4.0](https://github.com/Tiryoh/gha-jobid-action/compare/v1.3.0...1.4.0) (2024-07-11)
+
+### Documentation Update
+
+* Update contributors ([#48](https://github.com/Tiryoh/gha-jobid-action/issues/48))
+
+### Features
+
+* Make token and repository params optional ([#47](https://github.com/Tiryoh/gha-jobid-action/issues/47))
+
+
 <a name="v1.3.0"></a>
 ## [v1.3.0](https://github.com/Tiryoh/gha-jobid-action/compare/v1.2.0...v1.3.0) (2024-06-09)
 
