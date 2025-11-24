@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout action
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           path: .github/actions/gha-jobid-action
       - name: Run action with options
@@ -61,7 +61,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout action
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           path: .github/actions/gha-jobid-action
       - name: Run action with options
@@ -100,7 +100,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout action
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           path: .github/actions/gha-jobid-action
       - name: Run action with options
@@ -161,7 +161,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout action
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           path: .github/actions/gha-jobid-action
       - name: Run action with options
